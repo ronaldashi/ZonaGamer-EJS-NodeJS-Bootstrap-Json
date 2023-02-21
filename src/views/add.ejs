@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('static/header.ejs');%>
+</head>
+
+<body>
+
+    <style>
+        body {
+            background-image: url('https://www.teahub.io/photos/full/5-50867_fondos-de-pantalla-pc-4k-gamer.jpg');
+
+        }
+
+        p {
+
+            color: white;
+        }
+
+        p {
+
+            color: white;
+        }
+
+        label {
+            color: white;
+        }
+
+        h3 {
+            color: white;
+        }
+
+        tr {
+            color: white;
+        }
+
+        button {
+            color: white;
+        }
+    </style>
+    <div class="container">
+        <%- include('static/adminNavigation.ejs');%>
+            <br><br><br><br><br>
+            <div class="d-flex align-items-start row">
+                <div class="nav flex-column nav-pills col-md-3" id="v-pills-tab" role="tablist"
+                    aria-orientation="vertical">
+                    <button class="nav-link active" id="v-pills-home-tab" data-bs-toggle="pill"
+                        data-bs-target="#addClient" type="button" role="tab" aria-controls="v-pills-home"
+                        aria-selected="true">AGREGAR CLIENTE</button>
+                    <button class="nav-link" id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#addPrint"
+                        type="button" role="tab" aria-controls="v-pills-profile" aria-selected="false">AGREGAR
+                        DISPOSITIVO</button>
+                    <button class="nav-link" id="v-pills-messages-tab" data-bs-toggle="pill" data-bs-target="#addWork"
+                        type="button" role="tab" aria-controls="v-pills-messages" aria-selected="false">AGREGAR
+                        TRABAJO</button>
+                </div>
+                <div class="tab-content col-md-9" id="v-pills-tabContent">
+                    <div class="tab-pane fade show active" id="addClient" role="tabpanel"
+                        aria-labelledby="v-pills-home-tab">
+                        <h3>AGREGAR CLIENTE:</h3>
+                        <hr>
+                        <form method="POST" action="/addClient">
+                            <div class="mb-3">
+                                <label for="nombre" class="form-label">Nombre:</label>
+                                <input type="text" class="form-control" id="nombre" name="nombre" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="apellido" class="form-label">Apellido:</label>
+                                <input type="text" class="form-control" id="apellido" name="apellido" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="documento" class="form-label">Documento:</label>
+                                <input type="text" class="form-control" id="documento" name="documento" required>
+                            </div>
+                            <div class="mb-3">
+                                <button type="submit" class="btn btn-primary ">AGREGAR</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="tab-pane fade" id="addPrint" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+                        <h3>AGREGAR DISPOSITIVO:</h3>
+                        <hr>
+                        <form method="POST" action="/addInventory">
+                            <div class="mb-3">
+                                <label for="tipo" class="form-label">Tipo de Dispositivo:</label>
+                                <input type="text" class="form-control" id="tipo" name="tipo" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="marca" class="form-label">Marca:</label>
+                                <input type="text" class="form-control" id="marca" name="marca" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="referencia" class="form-label">Referencia:</label>
+                                <input type="text" class="form-control" id="referencia" name="referencia" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="serial" class="form-label">Serial:</label>
+                                <input type="text" class="form-control" id="serial" name="serial" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="estado" class="form-label">Estado:</label>
+                                <input type="text" class="form-control" id="estado" name="estado" required>
+                            </div>
+                            <div class="mb-3">
+                                <button type="submit" class="btn btn-primary ">AGREGAR</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="tab-pane fade" id="addWork" role="tabpanel" aria-labelledby="v-pills-messages-tab">
+                        <h3>AGREGAR TRABAJO:</h3>
+                        <hr>
+                        <form method="POST" action="/addWork">
+                            <div class="mb-3">
+                                <label for="id" class="form-label">Id:</label>
+                                <input type="number" class="form-control" id="id" name="id" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="serial" class="form-label">Serial Dispositivo:</label>
+                                <input type="text" class="form-control" id="serial" name="serial" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="documento" class="form-label">Documento Cliente:</label>
+                                <input type="text" class="form-control" id="documento" name="documento" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="descripcion" class="form-label">Descripcion:</label>
+                                <input type="text" class="form-control" id="descripcion" name="descripcion" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="fecha" class="form-label">Fecha:</label>
+                                <input type="date" class="form-control" id="fecha" name="fecha" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="precio" class="form-label">Precio:</label>
+                                <input type="number" class="form-control" id="precio" name="precio" required>
+                            </div>
+                            <div class="mb-3">
+                                <button type="submit" class="btn btn-primary ">AGREGAR</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <br><br><br><br><br>
+            <footer>
+                <%- include('static/mainFooter.ejs');%>
+            </footer>
+    </div>
+    <%- include('static/footer.ejs');%>
+</body>
+
+</html>

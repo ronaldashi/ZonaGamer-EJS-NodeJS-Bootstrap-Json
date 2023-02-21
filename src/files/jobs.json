@@ -1,0 +1,26 @@
+[
+    {
+        "Id": "4",
+        "SerialDispositivo": "1111A",
+        "DocumentoCliente": "2",
+        "Descripcion": "Servicio de juego",
+        "Fecha": "2023-02-10",
+        "Precio": "15000"
+    },
+    {
+        "Id": "2",
+        "SerialDispositivo": "1111A",
+        "DocumentoCliente": "1",
+        "Descripcion": "Servicio de juego",
+        "Fecha": "2023-02-15",
+        "Precio": "40000"
+    },
+    {
+        "Id": "1",
+        "SerialDispositivo": "G513QY",
+        "DocumentoCliente": "7",
+        "Descripcion": "Servicio de Streaming",
+        "Fecha": "2023-02-21",
+        "Precio": "20000"
+    }
+]

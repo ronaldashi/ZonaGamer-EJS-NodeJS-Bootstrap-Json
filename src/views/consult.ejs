@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('static/header.ejs');%>
+</head>
+
+<body>
+
+    <style>
+        body {
+            background-image: url('https://www.teahub.io/photos/full/5-50867_fondos-de-pantalla-pc-4k-gamer.jpg');
+
+        }
+
+        p {
+
+            color: white;
+        }
+
+        label {
+            color: white;
+        }
+
+        h3 {
+            color: white;
+        }
+
+        tr {
+            color: white;
+        }
+
+        
+    </style>
+    <div class="container">
+        <%- include('static/navigation.ejs');%>
+            <br><br><br><br>
+            <form id="formularioConsulta" method="POST" action="/consultState">
+                <div class="row justify-content-md-center">
+                    <div class="mb-3 col-md-7">
+                        <label for="serial" class="form-label">INGRESE EL SERIAL DEL DISPOSITIVO:</label>
+                        <input type="text" class="form-control" id="serial" name="serial" required>
+                    </div>
+                    <br>
+                    <div class="mb-3 col-md-7">
+                        <button id="botonC" type="submit" class="btn btn-primary ">CONSULTAR</button>
+                    </div>
+                </div>
+            </form>
+            <br><br><br><br><br><br><br>
+            <footer>
+                <%- include('static/mainFooter.ejs');%>
+            </footer>
+    </div>
+    <%- include('static/footer.ejs');%>
+</body>
+
+</html>

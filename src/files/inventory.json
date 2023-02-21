@@ -1,0 +1,30 @@
+[
+    {
+        "TipoDispositivo": "Computador",
+        "Marca": "ASUS",
+        "Referencia": "Strix G15",
+        "Serial": "G513QY",
+        "Estado": "En funcionamiento"
+    },
+    {
+        "TipoDispositivo": "Computador",
+        "Marca": "HP",
+        "Referencia": "T550",
+        "Serial": "AAA5C",
+        "Estado": "En funcionamiento"
+    },
+    {
+        "TipoDispositivo": "Computador",
+        "Marca": "Acer",
+        "Referencia": "Aspire E14",
+        "Serial": "1111A",
+        "Estado": "En funcionamiento"
+    },
+    {
+        "TipoDispositivo": "Computador",
+        "Marca": "Asus",
+        "Referencia": "Strix G11",
+        "Serial": "AAA5E",
+        "Estado": "En mantenimiento"
+    }
+]

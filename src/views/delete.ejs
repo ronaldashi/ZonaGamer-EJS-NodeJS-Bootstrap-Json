@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('static/header.ejs');%>
+</head>
+
+<body>
+
+
+    <style>
+        body {
+            background-image: url('https://www.teahub.io/photos/full/5-50867_fondos-de-pantalla-pc-4k-gamer.jpg');
+
+        }
+
+        p {
+
+            color: white;
+        }
+
+        label {
+            color: white;
+        }
+
+        h3 {
+            color: white;
+        }
+
+        tr {
+            color: white;
+        }
+
+        button {
+            color: white;
+        }
+    </style>
+    <div class="container">
+        <%- include('static/adminNavigation.ejs');%>
+            <br><br>
+            <div class="d-flex align-items-start row">
+                <div class="nav flex-column nav-pills col-md-3" id="v-pills-tab" role="tablist"
+                    aria-orientation="vertical">
+                    <button class="nav-link active" id="v-pills-home-tab" data-bs-toggle="pill"
+                        data-bs-target="#deleteClient" type="button" role="tab" aria-controls="v-pills-home"
+                        aria-selected="true">ELIMINAR CLIENTE</button>
+                    <button class="nav-link" id="v-pills-profile-tab" data-bs-toggle="pill"
+                        data-bs-target="#deletePrint" type="button" role="tab" aria-controls="v-pills-profile"
+                        aria-selected="false">ELIMINAR DISPOSITIVO</button>
+                    <button class="nav-link" id="v-pills-messages-tab" data-bs-toggle="pill"
+                        data-bs-target="#deleteWork" type="button" role="tab" aria-controls="v-pills-messages"
+                        aria-selected="false">ELIMINAR TRABAJO</button>
+                </div>
+                <div class="tab-content col-md-9" id="v-pills-tabContent">
+                    <div class="tab-pane fade show active" id="deleteClient" role="tabpanel"
+                        aria-labelledby="v-pills-home-tab">
+                        <h3>CIENTES</h3>
+                        <hr>
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Nombre</th>
+                                    <th scope="col">Apellido</th>
+                                    <th scope="col">Documento</th>
+                                    <th scope="col">Eliminar</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <% clients.forEach(function(client){ %>
+                                    <tr>
+                                        <td><%- client.Nombre %></td>
+                                        <td><%- client.Apellido %></td>
+                                        <td><%- client.Documento %></td>
+                                        <td><a href="/deleteClient/<%- client.Documento %>"
+                                                class="btn btn-danger">ELIMINAR</a></td>
+                                    </tr>
+                                    <% }) %>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="tab-pane fade" id="deletePrint" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+                        <h3>DISPOSITIVOS</h3>
+                        <hr>
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Tipo de Dispositivo</th>
+                                    <th scope="col">Marca</th>
+                                    <th scope="col">Referencia</th>
+                                    <th scope="col">Serial</th>
+                                    <th scope="col">Estado</th>
+                                    <th scope="col">Eliminar</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <% inventorys.forEach(function(inv){ %>
+                                    <tr>
+                                        <td><%- inv.TipoDispositivo %></td>
+                                        <td><%- inv.Marca %></td>
+                                        <td><%- inv.Referencia %></td>
+                                        <td><%- inv.Serial %></td>
+                                        <td><%- inv.Estado %></td>
+                                        <td><a href="/deleteInventory/<%- inv.Serial %>"
+                                                class="btn btn-danger">ELIMINAR</a></td>
+                                    </tr>
+                                    <% }) %>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="tab-pane fade" id="deleteWork" role="tabpanel" aria-labelledby="v-pills-messages-tab">
+                        <h3>TRABAJOS</h3>
+                        <hr>
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Id</th>
+                                    <th scope="col">Serial del Dispositivo</th>
+                                    <th scope="col">Documento del Cliente</th>
+                                    <th scope="col">Descripcion</th>
+                                    <th scope="col">Fecha</th>
+                                    <th scope="col">Precio</th>
+                                    <th scope="col">Eliminar</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <% jobs.forEach(function(job){ %>
+                                    <tr>
+                                        <td><%- job.Id %></td>
+                                        <td><%- job.SerialDispositivo %></td>
+                                        <td><%- job.DocumentoCliente %></td>
+                                        <td><%- job.Descripcion %></td>
+                                        <td><%- job.Fecha %></td>
+                                        <td><%- job.Precio %></td>
+                                        <td><a href="/deleteWork/<%- job.Id %>" class="btn btn-danger">ELIMINAR</a></td>
+                                    </tr>
+                                    <% }) %>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <br><br><br><br><br><br><br><br><br>
+            <footer>
+                <%- include('static/mainFooter.ejs');%>
+            </footer>
+    </div>
+    <%- include('static/footer.ejs');%>
+</body>
+
+</html>

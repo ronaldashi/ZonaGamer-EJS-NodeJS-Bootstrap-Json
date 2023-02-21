@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('static/header.ejs');%>
+</head>
+
+<body>
+    <style>
+        body {
+            background-image: url('https://www.teahub.io/photos/full/5-50867_fondos-de-pantalla-pc-4k-gamer.jpg');
+
+        }
+
+        p {
+
+            color: white;
+        }
+
+        label {
+            color: white;
+        }
+
+        h3 {
+            color: white;
+        }
+
+        tr {
+            color: white;
+        }
+
+        button {
+            color: white;
+        }
+    </style>
+    <div class="container">
+        <%- include('static/navigation.ejs');%>
+            <br><br>
+            <div class="row">
+                <div class="col-md-6">
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            <h2>ZONA GAMER</h2> Juegos online y servicio de Streaming
+                        </li>
+                        <li class="list-group-item">
+                            <h4><i class="fas fa-mobile-alt"></i> Celular</h4>
+                            3118282951
+                        </li>
+                        <li class="list-group-item">
+                            <h4><i class="fas fa-at"></i> Correo</h4> daniel.pineros01@uptc.edu.co
+                        </li>
+                        <li class="list-group-item">
+                            <h4><i class="fas fa-map-marked-alt"></i> Direccion</h4> Cra. 14 #3sur-15
+
+                        </li>
+                        <li class="list-group-item">
+                            <h4><i class="fas fa-city"></i> Ciudad</h4> Sogamoso
+                        </li>
+                        <li class="list-group-item">
+                            <h4><i class="fas fa-globe-americas"></i> Departamento</h4> Boyaca
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+
+                    <div style="width: 100%"><iframe width="100%" height="600" frameborder="0" scrolling="no"
+                            marginheight="0" marginwidth="0"
+                            src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=5.7029902,-72.9408247+(Zona%20Gamer%20Sogamoso)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"><a
+                                href="https://www.maps.ie/distance-area-calculator.html">measure area map</a></iframe>
+                    </div>
+
+                </div>
+            </div>
+            <br><br>
+            <footer>
+                <%- include('static/mainFooter.ejs');%>
+            </footer>
+    </div>
+    <%- include('static/footer.ejs');%>
+</body>
+
+</html>

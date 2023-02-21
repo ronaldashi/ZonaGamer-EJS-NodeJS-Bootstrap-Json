@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('static/header.ejs');%>
+</head>
+
+<body>
+
+    <style>
+        body {
+            background-image: url('https://www.teahub.io/photos/full/5-50867_fondos-de-pantalla-pc-4k-gamer.jpg');
+
+        }
+
+        label {
+
+            color: white;
+        }
+
+        h3 {
+
+            color: white;
+        }
+    </style>
+    <div class="container">
+        <%- include('static/navigation.ejs');%>
+            <br><br><br><br>
+            <form id="formularioUsuario" method="POST">
+                <div class="row justify-content-md-center">
+                    <div class="col-md-8">
+                        <h3>ADMINISTRADOR</h3>
+                        <hr>
+                    </div>
+                    <div class="mb-3 col-md-8">
+                        <label for="usuario">USUARIO:</label>
+                        <input type="text" id="usuario" name="username" class="form-control" required>
+                    </div>
+                    <div class="mb-4 col-md-8">
+                        <label for="contrasena">CONTRASEÑA:</label>
+                        <input type="password" id="contrasena" name="password" class="form-control" required>
+                    </div>
+                    <div class="col-md-8">
+                        <button id="botonC" type="submit" class="btn btn-primary btn-block">ACEPTAR</button>
+                    </div>
+                </div>
+            </form>
+            <br><br><br><br>
+            <footer>
+                <%- include('static/mainFooter.ejs');%>
+            </footer>
+    </div>
+    <%- include('static/footer.ejs');%>
+</body>
+
+</html>

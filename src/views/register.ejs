@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('static/header.ejs');%>
+</head>
+
+<body>
+
+    <style>
+        body {
+            background-image: url('https://www.teahub.io/photos/full/5-50867_fondos-de-pantalla-pc-4k-gamer.jpg');
+
+        }
+
+        p {
+
+            color: white;
+        }
+    </style>
+    <div class="container">
+        <%- include('static/adminNavigation.ejs');%>
+            <br><br><br><br><br>
+            <div class="d-grid gap-3 col-8 mx-auto">
+                <hr>
+                <button id="groupBotones" class="btn btn-primary" onclick="location.href='/add';" type="button">AGREGAR
+                    INFORMACION</button>
+                <button id="groupBotones" class="btn btn-primary" onclick="location.href='/information';"
+                    type="button">VER INFORMACION</button>
+                <button id="groupBotones" class="btn btn-primary" onclick="location.href='/delete';"
+                    type="button">ELIMINAR INFORMACION</button>
+                <hr>
+            </div>
+            <br><br><br><br>
+            <footer>
+                <%- include('static/mainFooter.ejs');%>
+            </footer>
+    </div>
+    <%- include('static/footer.ejs');%>
+</body>
+
+</html>
